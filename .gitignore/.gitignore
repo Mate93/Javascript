@@ -1,0 +1,61 @@
+<DOCTYPE! html>
+<head>
+  <meta charset="UTF-8"/>
+  <script>
+  
+    var pelaajannimi = " Anna pelaajalle nimi";
+    var pelaajanelamapisteet = prompt('Anna elämäpisteet (1-10)');
+    
+    while(pelaanajelamapisteet < 1 || pelaanajelamapisteet > 10){
+          pelaanajelamapisteet = prompt (' Virheellinen luku anna elämäpisteet uudelleen (1-10)');
+    }
+    
+          
+    
+    console.log(' Tervetuloa pelaamaan asepeliä ' + pelaajannimi + ' voit aloittaa taistelun. ');
+    
+    var taistelupaalla = true;
+    var osuuko = math.floor(math.random() * 2);
+    
+    var pelaantekemavahinko = math.floor(math.random() * 5 + 1); // 1-4 väliltä luvun
+    var lohtehtyvahinko = math.floor(math.random() * 5 + 1);
+    
+    var lohelamapisteet = 4 ;
+    var pelaajalletehtyvahinko = 0;
+    var lohtehtyvahinko = 0;
+    
+    while(teistelupaalla){
+        if(osuuko){
+        console.log('osuit lohikäärmeeseen teit vahinkoaa' + pelaajantekemavahinko +' pisteen vahinkoa ');
+        lohtehtyvahinko += pelaajantekemavahinko;
+        if(lohtehtyvahinko >= lohelamapisteet){
+          console.log('surmasit lohikäärmeen');
+          taistelupaalla = false;
+          }else{
+            osuuko = math.floor(math.random() * 2);
+            }
+        }else {
+         console.log('lohikäärme osui sinuun + lohmetekemavahinko +' pisteen vahinkoa ');
+         pelaajalletehtyvahinko += lohtekemavahinko
+          
+          var pelaantekemavahinko = math.floor(math.random() * 5 + 1); // 1-4 väliltä luvun
+          var lohtehtyvahinko = math.floor(math.random() * 5 + 1);
+         
+         if( pelaajalletehtyvahinko >= pelaajanelamapisteet){
+          console.log('kuolit hahaha');
+          
+      taistelupaalla = false;
+       }else{
+            osuuko = math.floor(math.random() * 2);
+            }
+            
+      }
+    }  
+    
+ </script>
+ </head>
+</html>
+    
+    
+    
+    
