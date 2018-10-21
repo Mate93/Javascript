@@ -1,4 +1,4 @@
-
+1.
 <script>
 Function Moro()
 {
@@ -7,3 +7,13 @@ console.log(kirjoita);
 }
 Moro();
 </script>
+
+2. //Vähän vaikeammin tehty 
+
+Function Moro(a)
+{
+var kirjoita = "nimeni on" +a;   
+console.log(kirjoita);
+}
+var name = "Mate";
+console.log (Moro(name));
