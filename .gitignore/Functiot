@@ -2,10 +2,8 @@
 <script>
 Function Moro()
 {
-
-document.write('hei maailma');
-
+var kirjoita = "nimeni on Mate"
+console.log(kirjoita);
 }
-
 Moro();
 </script>
