@@ -1,0 +1,35 @@
+// Index.html
+<html>
+<body>
+<form>
+arvo 1: <input type= text id= "arvo1">
+arvo 2: <input type= text id= "arvo2">
+Operator:
+<select id="operator">
+ <option value="puls">Add</option>
+ <option value="min">Minus</option>
+ <option value="jako">Divide</option>
+ </select>
+ <button type="button" onclick="calc()">Calculate</button>
+ </form>
+ <div id="result"></div>  //Näyttää vaustauksen html:ssä
+ </body>
+ <script src="main.js"></script>
+ </html>
+ 
+ //main.js
+ Function calc(){
+ var a = parseInt(document.querySelector("#arvo1").value);
+ var b = parseInt(document.querySelector("#arvo2").value);
+ var op = parseInt(document.querySelector("#operator").value);
+ 
+ var calculate;
+ if (op == "plus"){
+      calculate = a + b;
+  } else if (op == "min"){
+        calculate = a - b;
+  } else if (op == "jako"){
+        calculate = a / b;
+  }
+  document.querySelector("#result").innerHtml = calculate;
+  }
