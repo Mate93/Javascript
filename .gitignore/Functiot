@@ -1,0 +1,11 @@
+
+<script>
+Function Moro()
+{
+
+document.write('hei maailma');
+
+}
+
+Moro();
+</script>
