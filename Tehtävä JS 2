@@ -1,0 +1,20 @@
+Tehtävä 1
+
+<script language="JavaScript">
+
+  function kuhanpituus() {
+    a= prompt('mikä on kuhan pituus');
+    if (a > 37) {
+      return a;
+    } else {
+      tulo = (37) -+ (a);
+      return "Laske kuha takaisin järveen sinulta puuttuu vielä = " + tulo + 'cm';
+    }
+  }
+
+  document.write(kuhanpituus(37));
+
+
+</script>
+
+tehtävä 2
