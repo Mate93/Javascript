@@ -42,11 +42,8 @@ tehtävä 2
 
 tehtävä 3
 <script language="JavaScript">
-  nimi = prompt('Oletko mies vai nainen');
-  hemoglobiini = prompt("Anna hemoglobiini arvo");
-
-  nimi = prompt('Oletko mies vai nainen');
-  hemoglobiini = prompt("Anna hemoglobiini arvo");
+  const nimi = prompt('Oletko mies vai nainen');
+  const hemoglobiini = prompt("Anna hemoglobiini arvo");
 
 
   if (nimi === 'mies' ){
@@ -78,11 +75,11 @@ tehtävä 4
 <script language="JavaScript">
 
 
-  raha = prompt('anna lompakossa oleva rahamäärä');
-  bussi = prompt("Anna bussilipun hinta");
+  const raha = prompt('anna lompakossa oleva rahamäärä');
+  const bussi = prompt("Anna bussilipun hinta");
 
 
- var tulo = (raha-bussi);
+  const tulo = (raha-bussi);
 
   if (raha<bussi) {
       document.write("Ei riitä rahaa lompakkoon "+ tulo )
@@ -101,13 +98,13 @@ tehtävä 5
 <script language="JavaScript">
 
 
-  if (confirm('Lasketaanko neliöjuuri')) func1()
-  else func2()
+  if (confirm('Lasketaanko neliöjuuri')) neliojuuri()
+  else eilasketa()
 
-  function func1()
+  function neliojuuri()
   {tulo=prompt('Anna neliöjuuri')}
 
-  function func2()
+  function eilasketa()
   {alert('Neliöjuurta ei lasketa')}
 
   tulo= document.write(Math.sqrt(tulo).toFixed(2));
@@ -121,6 +118,7 @@ tehtävä 6
   {
     alert('Vuosi on karkausvuosi');
   }
+  if (x % 400 == 100)
   else
   {
     alert('Ei ole karkausvuosi')
