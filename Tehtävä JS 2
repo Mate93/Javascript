@@ -73,3 +73,61 @@ tehtävä 3
   }
 </script>
 
+tehtävä 4 
+
+<script language="JavaScript">
+
+
+  raha = prompt('anna lompakossa oleva rahamäärä');
+  bussi = prompt("Anna bussilipun hinta");
+
+
+ var tulo = (raha-bussi);
+
+  if (raha<bussi) {
+      document.write("Ei riitä rahaa lompakkoon "+ tulo )
+
+    }if (raha > bussi ){
+    document.write("Lompakkoon jää rahaa "+ tulo + ' euroa Hyvää matkaa')
+    }
+
+   
+
+
+</script>
+
+tehtävä 5
+
+<script language="JavaScript">
+
+
+  if (confirm('Lasketaanko neliöjuuri')) func1()
+  else func2()
+
+  function func1()
+  {tulo=prompt('Anna neliöjuuri')}
+
+  function func2()
+  {alert('Neliöjuurta ei lasketa')}
+
+  tulo= document.write(Math.sqrt(tulo).toFixed(2));
+</script>
+
+tehtävä 6
+<script language="JavaScript">
+
+  var x = prompt('Anna vuosiluku');
+  if (x % 4 == 0)
+  {
+    alert('Vuosi on karkausvuosi');
+  }
+  else
+  {
+    alert('Ei ole karkausvuosi')
+  }
+
+
+
+
+</script>
+
