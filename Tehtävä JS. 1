@@ -19,7 +19,7 @@ tehtävä 3
 <script language="JavaScript">
 
   var sade = prompt("mikä on ympyrän säde");
-  pintaala = sade / (Math.PI * 2);
+  pintaala = (Math.PI * sade *sade);
   document.write("Jos ympyrän säde on " + sade + " niin sen pinta-ala on " + pintaala + " cm.");
 
 </script>
@@ -38,7 +38,7 @@ tehtävä 4
 
   document.write(" Pinta-ala on " + pintaala);
 
-  piiri = ((kanta1 * korkeus2 ) * (kanta1 * korkeus2));
+  piiri = ((kanta1 + korkeus2 ) * 2);
   document.write("ja piiri on " + piiri );
 
 
@@ -64,7 +64,7 @@ tehtävä 5
 
 
 
-  summa = + (luku1 ) + (+ luku2) + (+ luku3);
+  summa = +luku1 + +luku2 + +luku3;
   document.write("Lukujen summa on: " + summa);
 
 
@@ -128,6 +128,8 @@ tehtävä 9. ii
   document.write("<br />");
   document.write(randomNumber(1,6));
   document.write("<br />");
+  document.write(randomNumber(1,6));
+    document.write("<br />");
   document.write(randomNumber(1,6));
 
 
