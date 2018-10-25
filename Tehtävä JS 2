@@ -18,3 +18,16 @@ Tehtävä 1
 </script>
 
 tehtävä 2
+
+<script language="JavaScript">
+
+
+
+ nimi = prompt('Anna nimi:')
+
+  var myArray = ['Rohkelikko."', 'Luihunen."', 'Puuskupuh."', 'Korpikynsi."'];
+  var item = myArray[(Math.random()*myArray.length)|0];
+  document.write(nimi + ", Olet:" +item);
+
+</script>
+
