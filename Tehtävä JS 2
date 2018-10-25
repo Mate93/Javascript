@@ -23,11 +23,20 @@ tehtävä 2
 
 
 
- nimi = prompt('Anna nimi:')
+  nimi = prompt('Anna nimi:');
 
-  var myArray = ['Rohkelikko."', 'Luihunen."', 'Puuskupuh."', 'Korpikynsi."'];
-  var item = myArray[(Math.random()*myArray.length)|0];
-  document.write(nimi + ", Olet:" +item);
+  var picnumber = Math.floor((Math.random() * 4) + 1);
+
+  if (picnumber === 1){
+    document.write(nimi +'Olet Rohkelikko');
+  } else if (picnumber === 2) {
+    document.write(nimi + 'Olet Luihunen');
+  } else if (picnumber === 3) {
+    document.write( nimi + 'Olet Puuskupuh');
+  } else {
+    document.write(nimi +'Olet Korpikynsi');
+  }
+
 
 </script>
 
