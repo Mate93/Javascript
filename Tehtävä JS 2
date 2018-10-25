@@ -40,3 +40,36 @@ tehtävä 2
 
 </script>
 
+tehtävä 3
+<script language="JavaScript">
+  nimi = prompt('Oletko mies vai nainen');
+  hemoglobiini = prompt("Anna hemoglobiini arvo");
+
+  nimi = prompt('Oletko mies vai nainen');
+  hemoglobiini = prompt("Anna hemoglobiini arvo");
+
+
+  if (nimi === 'mies' ){
+    if (hemoglobiini<134) {
+      document.write("hemoglobiini on alhainen")
+    }
+    }else {
+    hemoglobiini= document.write('Hemoglobiini on normaali')
+  }
+    if (nimi === 'mies') {
+    if (hemoglobiini>195) {
+      document.write("hemoglobiini on korkea");
+    }
+    } if (nimi === 'nainen') {
+      if (hemoglobiini<117) {
+        document.write("hemoglobiini on alhainen");
+      }else {
+        hemoglobiini= document.write('Hemoglobiini on normaali')
+      }
+  }  if (nimi === 'nainen'){
+    if (hemoglobiini>175) {
+      document.write("hemoglobiini on korkea");
+    }
+  }
+</script>
+
