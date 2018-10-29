@@ -80,10 +80,16 @@
             text-shadow: none;
             overflow: hidden;
             margin: auto;
+            position: relative;
         }
 
         /* relative and absolute positioning with blue */
-        #blue {
+       /*Siirtää kolmas boxin haluutuuun positioniin*/
+       #blue {
+            position: absolute;
+            bottom: 0;
+            right:0;
+        
         }
 
         h1{
