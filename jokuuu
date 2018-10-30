@@ -1,124 +1,254 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Positioning Items</title>
-    <meta charset="UTF-8">
-    <style>
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ ccs*/
 
-        /*////////////////////
-        // Positioning items
-        //////////////////////
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
 
-        Reset *
-        Display: inline vs block
-        https://www.w3schools.com/cssref/pr_class_display.asp
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
 
-        Box-sizing
-        https://www.w3schools.com/css/css3_box-sizing.asp
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
 
-        Using percentages and max-width
-        https://www.w3schools.com/cssref/css_units.asp
-
-        Float and clear
-        https://www.w3schools.com/cssref/pr_class_float.asp
-
-        Flexbox - https://www.w3schools.com/css/css3_flexbox.asp
-
-        Absolute/Relative positioning
-        https://www.w3schools.com/cssref/pr_class_position.asp
-
-        Centering
-        https://www.w3schools.com/css/css_align.asp
-
-        overflow:hidden jos menee yli se korjaa tuon värin
-        margin
-
-        */
-
-        * {
-            /*margin: 0;
-            padding: 0;*/
-
-        }
-
-        body {
-
-        }
-
-        .box {
-            display: block;
-            height: 100px;
-            width: 100px;
-            border: 10px solid #b3d4fc;
-            color: #b3d4fc;
-            box-sizing: border-box;
-
-        }
-
-        #red { background-color: red;}
-        #green { background-color: green;}
-        #blue { background-color: blue;}
-        #yellow { background-color: yellow; color: black;}
-        #orange { background-color: orange;}
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
 
 
-        .clear { clear: both;}
+img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    margin: auto;
 
-        /* img */
-        img {
-            width: 50%;
 
-            
-        }
 
-        /* container */
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            background-color: #b3d4fc;
-            text-shadow: none;
-            overflow: hidden;
-            margin: auto;
-            position: relative;
-        }
+}
 
-        /* relative and absolute positioning with blue */
-       /*Siirtää kolmas boxin haluutuuun positioniin*/
-       #blue {
-            position: absolute;
-            bottom: 0;
-            right:0;
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.primary-color {
+    background-color: #2ba6cb;
+}
+
+
+.secondary-color {
+    background-color: #e9e9e9;
+}
+
+.default {
+    background-color: #ffae00;
+
+
+}
+
+.alert {
+    background-color: #c60f13;
+}
+
+header {
+    background-image: url(http://via.placeholder.com/960x100/000?text=HeaderBGImage);
+    background-position: center;
+}
+
+header h1 {
+    margin:0;
+    font-size: 1.5em;
+    position: absolute;
+    top: 0;
+    line-height: 100px;
+    padding: 0 6em;
+    color: #e9e9e9;
+}
+
+figure{
+
+}
+
+ul{
+   display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    right: 0;
+    padding: 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    body {
+        max-width: 60em;
+        margin: auto;
+    }
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+
+    }
+
+    img {
+        max-width: 100% !important;
+
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
         
-        }
+    }
 
-        h1{
+    h2,
+    h3 {
+        page-break-after: avoid;
 
-        }
-
-    </style>
-
-
-</head>
-<body>
-<div class="container">
-
-
-<div class="box" id="red">Box 1</div>
-<div class="box" id="green">Box 2</div>
-<div class="box" id="blue">Box 3</div>
-<div class="box" id="yellow">Box 4</div>
-<div class="box" id="orange">Box 5</div>
-</div>
-
-
-<!-- Float continues, clearing -->
-
-<h1>Heading 1</h1><h1>Heading 2</h1>
-
-<!-- Responsive images and centering -->
-<img src="maisema+(9).jpeg">
-
-
-</body>
-</html>
+    }
+}
