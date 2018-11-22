@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>HTML SIVU</h1>
+<form action="/upload" method="post" enctype="multipart/form-data" id="lomake">
+
+
+   <label>Kuva, Ääni tai video
+    <input type="file" name="kuva" accept="audio/*,video/*,image/*">
+       </label>
+    <button type="submit">Lähetä</button>
+</form>
+<div>
+    <img id="kuva">
+    <audio id="aud" controls></audio>
+    <video id="vid" controls></video>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+//script
+
+app.get('/', (req, res) => {
+  console.log(req.ip);
+  console.log(req.query.myParam);
+  res.send('ok 1');
+});
+
+app.get('/path1/:param1', (req, res) => {
+  console.log(req.params.param1);
+  res.send('ok 2');
+});
+
+app.get(['/path2', '/path3', '/path4'], (req, res) => {
+  console.log(req);
+  res.send('ok 3');
+});
+
+app.use('/json', (req, res, next) => {
+  console.log('Middleware tässä');
+  next();
+});
+
+app.get('/json', (req, res) => {
+  const objekti = {
+    id: 1,
+    name: 'My response',
+  };
+  res.send(objekti);
+});
+
+app.listen(3000);
