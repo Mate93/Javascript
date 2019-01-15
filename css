@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #laatikko {
+            position: absolute;
+            margin: auto;
+            width: 50px;
+            margin-left: 60%;
+            height: 170px;
+            border: 5px solid darkgray;
+            padding: 10px;
+            background-color: black;
+        }
+        #example1 {
+            position: relative;
+            border-style: solid;
+            padding: 10px;
+            border-radius: 50%;
+            margin: 20px;
+            width: 10px;
+            background-color: red;
+            height: 20px;
+
+        }
+
+        #example2 {
+            position: relative;
+            border-style: solid;
+            width: 10px;
+            padding: 10px;
+            border-radius: 50%;
+            margin: 20px;
+            background-color: yellow;
+            height: 20px;
+
+        }
+
+        #example3 {
+            position: relative;
+            border-style: solid;
+            width: 10px;
+            padding: 10px;
+            border-radius: 50%;
+            margin: 20px;
+            background-color: green;
+            height: 20px;
+
+        }
+
+        #laatikot {
+            margin: auto;
+            width: 10px;
+            height: 200px;
+            margin-bottom: 100%;
+            padding: 10px;
+            background-color: black;
+
+
+
+
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="laatikko">
+    <div id="example1"></div>
+    <div id="example2"></div>
+    <div id="example3"></div>
+
+    <div id="laatikot"></div>
+</div>
+
+</body>
+</html>
