@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id ="Lotto" onclick="generateSerial()">Lotto</button>
+<div id="serial"></div>
+
+</body>
+
+</body>
+<script src="teht4.js"></script>
+</html>
+
+//SCRIPT
+
+function generateSerial() {
+    
+
+let chars = ("1")+("2")+("4")+("6")+("7")+("8")+("9")+("0");
+serialLenght= 7;
+
+randomserial = "";
+randomserial = "";
+randomserial = "";
+
+
+for (i =0; i<serialLenght; i = i + 1){
+
+    let randomnumero = Math.floor(Math.random()* chars.length);
+
+    randomserial += chars.substring(randomnumero, randomnumero + 1);
+}
+
+document.getElementById("serial").innerHTML= randomserial;
+}
