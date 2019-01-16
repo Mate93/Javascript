@@ -36,3 +36,41 @@ for (i =0; i<serialLenght; i = i + 1){
 
 document.getElementById("serial").innerHTML= randomserial;
 }
+
+Teht 3
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rer</title>
+</head>
+
+
+
+
+<body>
+<script>
+    let numero = 3;
+    let arvaus = prompt("Arvaa numero");
+
+    for (i=0; i<1; i++){
+        if (numero == arvaus) {
+            console.log("Arvasit oikein");
+            break;
+        }if (numero < arvaus) {
+            console.log("defined");
+            break;
+        }
+        else (numero > arvaus)
+                console.log("defined");
+
+
+    }
+
+
+
+</script>
+
+</body>
+</html>
