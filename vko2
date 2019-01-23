@@ -1,0 +1,7 @@
+9.funktio joka palauttaa taulukon moodi. Taulukossa on 1-40 . jos taulukossa on1 1 1 2 niin sen moodi on 1
+10. funktio joka palauttaa funktion joka palauttaa satunnaisen funktion. Sen pitää palauttaa esim jos sanoo että 1-40 niin se palauttaa kaikki sen väliltä.
+11. sieltä halutaan taulukka jossa on n elementtiä
+12. pitää antaa taulaukko jossa on kokonais luvut low ja hihht esim jos sanoo intrange -2-2 
+13. funktio jotka palauttaa 
+14. Kirjoita Rekursiivinen funktio Anna kertoma ja sen ratkaisu. näitää löytyy paljon netistä.
+15. tämä taulukko pitää laijitella  bmi indeksin mukaisesti
