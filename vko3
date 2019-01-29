@@ -1,0 +1,16 @@
+12 kertaa peräkkäin painetaan kaasua
+
+Encapsulation=pyritään piilottamaan luokasta mahdollisemman paljon.
+
+Loose connectivity = asiat jotka ovat löyhä kytkentä eli ei vahva kytkentä
+super viittää siihen luokkaan josta me peritään
+ student estendt human eli opiskelija perii ihmisen
+
+teht17. korkkipois korkki päälle joka kerta kun käytän kynää kuluu mustetta jos korkki on päällä ei voi kirjoittaa jos ei niin voi kirjoittaa. Draw toimii vain jos korkki on auki ja sieltä voi palauttaa true tai false että toimiiko.
+
+teht18.  opiskelija voi saada oppistettä tekemällä 4 metka asiaa niin saa opintopistettä. 
+
+teht 19. halutaan tehdä automaattinen kahvikone siellä on nappi on/off ja siellä on ledi josta näkee että onko se päällä ja 
+siellä on brew eli antaa kahvin. kahvinkoneessa on vettä ja siellä on kahvia. 
+ei tehdä yhteen luokkaan vain pieneen luokkaan esim kahvinkoneessa on erikseen vesisäiliö ja papusäiliö. 
+Vettä voi täyttää ja papua. vesi ja papu on samankaltaista asiaa eli niissä voi olla container .  
