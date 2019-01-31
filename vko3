@@ -14,3 +14,55 @@ teht 19. halutaan tehdä automaattinen kahvikone siellä on nappi on/off ja siel
 siellä on brew eli antaa kahvin. kahvinkoneessa on vettä ja siellä on kahvia. 
 ei tehdä yhteen luokkaan vain pieneen luokkaan esim kahvinkoneessa on erikseen vesisäiliö ja papusäiliö. 
 Vettä voi täyttää ja papua. vesi ja papu on samankaltaista asiaa eli niissä voi olla container .  
+
+teht17
+<script>                                                 
+                                                         
+class Marker{                                            
+  constructor(){                                         
+    this._capon = true;                                  
+    this._ink=10                                         
+  }                                                      
+  putcapon(){                                            
+    this._capon = true;                                  
+                                                         
+  }                                                      
+  takecapoff(){                                          
+    this._capon=false;                                   
+                                                         
+  }                                                      
+  draw(){                                                
+                                                         
+    if (this._ink>= 1 && !this._capon ){                 
+        this._ink--;                                     
+        return  true;                                    
+                                                         
+                                                         
+     }  else {                                           
+      return false;                                      
+                                                         
+    }                                                    
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+                                                         
+  }                                                      
+                                                         
+}                                                        
+let m = new Marker();                                    
+console.log(m);                                          
+m.takecapoff();                                          
+console.log(m);                                          
+m.draw();                                                
+console.log(m);   
+
+teht18
+class MetropoliaStudent {  
+  constructor () {         
+    this._Metka = 4;       
+    this._Student          
+  }                        
+                           
+}                          
