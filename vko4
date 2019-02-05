@@ -1,0 +1,34 @@
+synkroninen on esim luetaan tiedoston sisältöä.
+ja se odottaa tapahtuman loppua.
+
+
+
+asynkroninen kun teen kutsun niin se koodi jatkuu samantien eteenpäin eli ei jäädä odottamaan.
+-tässä käytetään callback asian palauttamiseen. 
+
+threads se käytetään toinen jos halutaan käynnistää toista suoritus rintaa
+
+A Promise se on esim tieto jota halutaan saada ja se löytyy promisessa. eli se lupaus on täytetty.
+miten se palauttaa tietoa promisesta se palauttaan .then() ja cacth() saa sen kiinni.
+
+pending (not yet available) ei vielä valmis.
+
+Fetch antaa lupauksen eli promise ja .then palauttaa sen. 
+
+networking koodissa then antaa eteenpäin jos se menee läpi eli ok jos ei niin elsellle niin se palauttaa .cath joka antaa consolissa error.
+
+resolve jos kaikki meni hyvin eli if:ssä
+reject jos ei mennyt hyvin else:ssä
+
+promise.all yhdistää lupauksia
+
+promise.race eli kisa se joka ekaksi onnistuu menee then haaraan.
+
+sekventointi jos halutaan ajaa rinnakkais funktiota
+.reduce joka yhdistää elementtiä
+
+teht 20 
+lue linkit 
+
+teht 21
+ mitä linkin päästä on eli luetaan dataa.
