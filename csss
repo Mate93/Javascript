@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            background: url(beaumont-home-background.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            position: relative;
+            height: 100vh;
+        }
+        div.kuva1 {
+            content:url(Hummingbird-Free-Download-PNG.png);
+            background-repeat: no-repeat;
+            background-size: auto;
+            position: absolute;
+            width: 10%;
+            left: 75%;
+            bottom: 73%;
+            display: inline-block;
+            color: white;
+            margin-right: 5px;
+            margin-left: 5px;
+            animation: skew 1s infinite;
+            transform: skew(20deg);
+            animation-direction: alternate;
+            opacity: .7;
+        }
+        @keyframes skew {
+            0% {
+                transform: skewX(20deg);
+            }
+            100% {
+                transform: skewX(-20deg);
+            }
+        }
+                   
+
+        body, html {
+            height: 100%;
+        }
+
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div.planet {
+            content:url(pink-light-transparent-png-27.png);
+            background-size: cover;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            position: absolute;
+
+
+        }
+
+        .box {
+            width: 100%;
+            height: 100%;
+            font: 16px "Zilla", "Open Sans", "Helvetica", "Arial", sans-serif;
+            color: blue;
+        }
+
+        .planet:hover{
+            width: 300px;
+             height: 300px;
+
+        }
+        #planet-1{
+        @include dimension(150px);
+            background-image: url("pink-light-transparent-png-27.png");
+            z-index: 20;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+<div class="kuva1"></div>
+    <div id="planet-1" class="planet layer-1"></div>
+<div id="mouse"></div><br>
+<div id="mouse-center"></div>
+    <div class="slide one"></div>
+</div>
+<div class="box">
+
+    <p>
+        <code>X</code>: <span id="x"></span>
+    </p>
+    <p>
+        <code>Y</code>: <span id="y"></span>
+    </p>
+</div>
+
+</body>
+<script>
+  let box = document.querySelector(".box");
+  let pageX = document.getElementById("x");
+  let pageY = document.getElementById("y");
+  function updateDisplay(event) {
+    pageX.innerText = event.pageX;
+    pageY.innerText = event.pageY;
+  }
+
+  box.addEventListener("mousemove", updateDisplay, false);
+  box.addEventListener("mouseenter", updateDisplay, false);
+  box.addEventListener("mouseleave", updateDisplay, false);
+
+
+
+</script>
+</html>
