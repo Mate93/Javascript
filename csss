@@ -1,3 +1,24 @@
+
+
+//Event
+<html>
+<body>
+
+
+<button onclick="displayDate()">Paina tästä jos haluat nähdä kellonaaikaa</button>
+
+<script>
+function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+</script>
+
+<p id="demo"></p>
+
+</body>
+</html> 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
