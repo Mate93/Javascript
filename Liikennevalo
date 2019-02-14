@@ -1,0 +1,187 @@
+//HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+
+        body {
+            background: linear-gradient(to right, rgba(183, 222, 237, 1) 0%, rgba(183, 222, 237, 1) 100%);
+
+            background-color: #4CAF50;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border-radius: 50%;
+
+
+        }
+
+        #punainen, #keltainen, #vihreä{
+            background-image: radial-gradient(black, transparent 30%) !important;
+            background-size: 5px 5px !important;
+        }
+        #laatikko {
+            position: absolute;
+            margin: 320px;
+            width: 50px;
+            margin-left: 60%;
+            height: 170px;
+            border: 5px solid darkgray;
+            padding: 10px;
+            background-color: black;
+
+        }
+        #punainen {
+            position: relative;
+            background-color: rgb(255,0,0)	;
+            border: none;
+            padding: 19px 22px;
+            display: inline-block;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 50%;
+
+
+        }
+
+
+        #keltainen {
+            position: relative;
+            background-color:rgb(255,255,0);
+            border: none;
+            padding: 19px 22px;
+            display: inline-block;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 50%;
+
+
+        }
+
+        #vihreä {
+            position: relative;
+            background-color: rgb(76,175,80);
+            border: none;
+            padding: 19px 22px;
+            display: inline-block;
+            margin: 10px 2px;
+            cursor: pointer;
+            border-radius: 50%;
+
+
+
+        }
+
+
+        #laatikot {
+            margin: auto;
+            width: 5px;
+            height: 300px;
+            margin-bottom: 100%;
+            padding: 10px;
+            background-color: black;
+
+
+
+
+        }
+        h2{
+            left: 40px;
+             font-size: 4em;
+            z-index: 2;
+        }
+
+        #box{
+            margin-top: 140px;
+            border: 1px solid;
+            padding: 40px;
+            width: 170px;
+            height: 140px;
+            
+        }
+        #aurinko{
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
+            background-image: linear-gradient(to right, orange , yellow);
+            margin: auto;
+            box-shadow: 15px 20px 180px orange ;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="laatikko">
+    <div id="punainen"></div>
+    <div id="keltainen"></div>
+    <div id="vihreä"></div>
+
+    <div id="laatikot"></div>
+</div>
+<h2>Trrrrraffic</h2>
+<h2>Lights</h2>
+
+<div id="box">
+
+
+</div>
+<div id="aurinko">
+
+</div>
+
+</body>
+<script src="liikennevalo.js"></script>
+</html>
+
+
+
+
+
+
+//JS
+const clickCounter =
+    {
+      up: 0,
+      middle: 0,
+      low: 0,
+    };
+// increment value of 'up' by one
+clickCounter['up'] += 1;
+{
+  let puna = document.getElementById("punainen"),
+      count = 0;
+  puna.onclick = function() {
+    count += 1;
+    const textOutput = document.querySelector('#box');
+    textOutput.innerHTML = "You clicked: red" + "<p> The color: rgb (255,0,0)</p>" +
+        "<p>This many times:</p>"+ count;
+
+  };
+}
+{
+  let kelt = document.getElementById("keltainen"),
+      count = 0;
+  kelt.onclick = function() {
+    count += 1;
+    const textOutput = document.querySelector('#box');
+    textOutput.innerHTML = "You clicked:yellow" + "<p> The color: rgb (255,255,0) </p>" +
+        "<p>This many times:</p>"+ count;
+
+  };
+}
+
+{
+  let vih = document.getElementById("vihreä"),
+      count = 0;
+  vih.onclick = function() {
+    count += 1;
+    const textOutput = document.querySelector('#box');
+    textOutput.innerHTML = "You clicked:green"  + "<p> The color: rgb (76,175,80) </p>" +
+        "<p>This many times:</p>"+ count;
+
+  };
+
+}
