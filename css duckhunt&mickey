@@ -1,0 +1,114 @@
+//mikki
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    body{
+        margin: 0;
+        padding: 0;
+        background: url("Mickey-Mouse-mickey-mouse-34395564-1440-900.jpg") 5%;
+
+    }
+    .linnut {
+        width: 50%;
+        height: 50%;
+        background: url("mickey-sprite.png") no-repeat 0 0;
+        animation: mickey 0.5s steps(4) 6,
+        mikki 0.5s 3s steps(2) 6;
+
+
+        /*animation-name: mickey;
+        animation-duration: 4s;
+        animation-iteration-count: 1;*/
+    }
+
+   @keyframes mickey {
+       from{
+           background-position: 0 0;
+       }
+       to{
+           background-position: 0 -1250px;
+
+       }
+   }
+    @keyframes mikki {
+        from{
+            background-position: -360px 0;
+        }
+        to{
+            background-position: -800px 0;
+
+        }
+    }
+</style>
+<body>
+<div id="lintu">
+    <div class="linnut"></div>
+    <div class="box"></div>
+    <div class="taivas"></div>
+</div>
+</body>
+</html>
+
+
+//duckhunt
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    body{
+        margin: 0;
+        padding: 0;
+        background: url("stage.png") no-repeat 5%;
+
+    }
+    .koirat {
+        width: 800px;
+        height: 900px;
+        background: url("sprite.png") no-repeat 5% 0;
+        animation: mickey 0.5s steps(4) 2,
+        mikki 0.5s  steps(2) 2;
+
+
+        /*animation-name: mickey;
+        animation-duration: 4s;
+        animation-iteration-count: 1;*/
+    }
+
+
+    @keyframes mikki {
+        from{
+            background-position: 0 0;
+        }
+        to{
+            background-position: 0 -200px;
+
+        }
+    }
+    @keyframes mikki {
+        from{
+            background-position: -360px 0;
+        }
+        to{
+            background-position: -800px 0;
+
+        }
+    }
+</style>
+<body>
+<div id="lintu">
+    <div class="koirat"></div>
+    <div class="box"></div>
+    <div class="tausta"></div>
+</div>
+</body>
+</html>
