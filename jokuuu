@@ -1,254 +1,75 @@
-/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ ccs*/
 
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
+// app.js
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.css';
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+class App extends Component {
+    state = {
+        picArray: [
+            {
+                'title': 'Title 1',
+                'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales enim eget leo condimentum vulputate. Sed lacinia consectetur fermentum. Vestibulum lobortis purus id nisi mattis posuere. Praesent sagittis justo quis nibh ullamcorper, eget elementum lorem consectetur. Pellentesque eu consequat justo, eu sodales eros.',
+                'thumbnails': {
+                    w160: 'http://placekitten.com/160/161',
+                },
+                'filename': 'http://placekitten.com/2048/1920',
+            },
+            {
 
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+                'title': 'Title 2',
+                'description': 'Donec dignissim tincidunt nisl, non scelerisque massa pharetra ut. Sed vel velit ante. Aenean quis viverra magna. Praesent eget cursus urna. Ut rhoncus interdum dolor non tincidunt. Sed vehicula consequat facilisis. Pellentesque pulvinar sem nisl, ac vestibulum erat rhoncus id. Vestibulum tincidunt sapien eu ipsum tincidunt pulvinar. ',
+                'thumbnails': {
+                    w160: 'http://placekitten.com/160/162',
+                },
+                'filename': 'http://placekitten.com/2041/1922',
+            },
+            {
+                'title': 'Title 3',
+                'description': 'Phasellus imperdiet nunc tincidunt molestie vestibulum. Donec dictum suscipit nibh. Sed vel velit ante. Aenean quis viverra magna. Praesent eget cursus urna. Ut rhoncus interdum dolor non tincidunt. Sed vehicula consequat facilisis. Pellentesque pulvinar sem nisl, ac vestibulum erat rhoncus id. ',
+                'thumbnails': {
+                    w160: 'http://placekitten.com/160/163',
+                },
+                'filename': 'http://placekitten.com/2039/1920',
+            },
+        ],
+    };
+  render() {
+return (
+        <table>
+              <tbody>
+              <Taulukko picArray={this.state.picArray}/>
+              </tbody>
+          </table>
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-
-img {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
-    margin: auto;
-
-
-
-}
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-textarea {
-    resize: vertical;
+  );
 
 }
+  }
 
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+export default App;
 
+//Taulukko
+import React, {Component} from 'react' ;
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-.primary-color {
-    background-color: #2ba6cb;
-}
-
-
-.secondary-color {
-    background-color: #e9e9e9;
-}
-
-.default {
-    background-color: #ffae00;
-
-
-}
-
-.alert {
-    background-color: #c60f13;
-}
-
-header {
-    background-image: url(http://via.placeholder.com/960x100/000?text=HeaderBGImage);
-    background-position: center;
-}
-
-header h1 {
-    margin:0;
-    font-size: 1.5em;
-    position: absolute;
-    top: 0;
-    line-height: 100px;
-    padding: 0 6em;
-    color: #e9e9e9;
-}
-
-figure{
-
-}
-
-ul{
-   display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    right: 0;
-    padding: 0;
-
-}
-
-
-
-
-
-
-
-
-
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-    body {
-        max-width: 60em;
-        margin: auto;
+class Taulukko extends Component {
+    render() {
+        return this.props.picArray.map((picArr) => (
+            <tr>
+                <td>
+                    <img src={PicArr.thumbnails.w160} alt="Picture not viewable"/>
+                </td>
+                <td>
+                    <h3>{picArr.title}</h3>
+                    <p>{picArr.description}</p>
+                </td>
+                <td>
+                    <a href={picArr.filename}>View</a>
+                </td>
+            </tr>
+        ));
     }
 
 }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-
-    }
-
-    img {
-        max-width: 100% !important;
-
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-        
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-
-    }
-}
+export default Taulukko;
